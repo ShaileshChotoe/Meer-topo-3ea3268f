@@ -19,12 +19,17 @@ for ($i=0; $i < $ammountLanden; $i++)
   $array['Land'] = readline();
   echo "Wat is de hoofdstad? \n";
   $array['Hoofdstad'] = readline();
-  $arrayName[$i] = $array;
+  array_push($arrayName, $array);
 }
 
-for ($i=0; $i < $ammountLanden; $i++)
+// for ($i=0; $i < $ammountLanden; $i++)
+// {
+//   echo 'De hoofdstad van ' . $arrayName[$i]['Land'] . ' is ' . $arrayName[$i]['Hoofdstad'] . "\n";
+// }
+
+foreach ($arrayName as $key => $val)
 {
-  echo 'De hoofdstad van ' . $arrayName[$i]['Land'] . ' is ' . $arrayName[$i]['Hoofdstad'] . "\n";
+  echo "De hoofdstad van " . $val['Land'] . ' is ' . $val['Hoofdstad'] . "\n";
 }
 
 
